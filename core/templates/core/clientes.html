@@ -1,0 +1,103 @@
+<!--Es para mandar a llamar nuestro template ya creado con base.html-->
+{% extends 'core/base.html' %}
+
+{% block title %}Clientes{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/clientes.jpg' %}{% endblock %}
+
+{% block headers %}
+    <h1>Clientes</h1>
+    <span class="subheading">Registro de clientes</span>
+{% endblock %}
+
+{% block content %}
+
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario de Contacto</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, 
+	maximun-scale=1.0, minimun-scale=1.0">
+    {% load static %}
+    	<link href="{% static 'core/css/formularios1.css' %}" rel="stylesheet">
+</head>
+
+<body>
+	<div class="contenedor">
+		<form action="" class="form">
+			<div class="form-header">
+				<h1 class="form-title">C<span>ontacto</span></h1>
+  
+  			<div class="form-row">
+    			<div class="form-group col-md-6">
+      				<label class="form-label" for="inputNombre">Nombre</label>
+      				<input type="text" class="form-control" id="inputNombre" placeholder="Angel">
+    			</div>
+    			<div class="form-group col-md-6">
+      				<label class="form-label" for="inputApaterno">A.Parterno</label>
+      				<input type="text" class="form-control" id="inputApaterno" placeholder="Pérez">
+    			</div>
+  			</div>
+
+ 			<div class="form-row">
+    			<div class="form-group col-md-6">
+      				<label class="form-label"  for="inputAmaterno">A.Materno</label>
+      				<input type="text" class="form-control" id="inputAmaterno" placeholder="Hernández">
+    			</div>
+    			<div class="form-group col-md-6">
+      				<label class="form-label" for="inputTelefono">Telefono</label>
+      				<input type="text" class="form-control" id="inputTelefono" placeholder="5613141678">
+    			</div>
+  			</div>
+
+			<div class="form-group">
+    			<label class="form-label"  for="inputCalle">Calle</label>
+    			<input type="text" class="form-control" id="inputCalle" placeholder="Charles de Gaulle">
+			</div>
+
+			<div class="form-row">
+    			<div class="form-group col-md-6">
+      				<label class="form-label"  for="inputColonia">Colonia</label>
+      				<input type="text" class="form-control" id="inputColonia" placeholder="La Universal">
+    			</div>
+    			<div class="form-group col-md-6">
+      				<label class="form-label"  for="inputMunicipio">Municipio</label>
+      				<input type="text" class="form-control" id="inputMunicipio" placeholder="Naucalpan">
+    			</div>
+  			</div>
+
+ 			<div class="form-row">
+    			<div class="form-group col-md-3">
+      				<label class="form-label"  for="inputNexterior">No.Exterior</label>
+      				<input type="text" class="form-control" id="inputNexterior" placeholder="12">
+    			</div>
+    			<div class="form-group col-md-3">
+      				<label class="form-label"  for="inputNinterior">No.Interior</label>
+      				<input type="text" class="form-control" id="inputNinterior" placeholder="4">
+    			</div>
+				<div class="form-group col-md-3">
+      				<label class="form-label"  for="inputCp">Código Postal</label>
+      				<input type="text" class="form-control" id="inputCp" placeholder="53425">
+    			</div>
+				<div class="form-group col-md-3">
+      				<label class="form-label"  for="inputCp">Periodicidad-Visita</label>
+      				<input type="text" class="form-control" id="inputCp" placeholder="En días">
+    			</div>
+  			</div>	
+
+			<div class="botones">
+    			<input type="submit" class="btn-submit" value="Ingresar">
+    			<input type="submit" class="btn-submit" value="Buscar">
+    			<input type="submit" class="btn-submit" value="Actualizar">
+    			<input type="submit" class="btn-submit" value="Eliminar">
+			</div>
+		</form>
+</body>
+<!--
+<table>
+    {{form.as_table}}
+<table>-->
+
+{% endblock %}    
+
+
+
